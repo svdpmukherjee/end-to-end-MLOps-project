@@ -7,7 +7,9 @@ from cnnClassifier.entity.config_entity import (DataIngestionConfig,
                                                 EvaluationConfig)
 
 
+
 class ConfigurationManager:
+    # config/config.yaml; params.yaml
     def __init__(
         self,
         config_filepath = CONFIG_FILE_PATH,
@@ -19,7 +21,7 @@ class ConfigurationManager:
         create_directories([self.config.artifacts_root])
 
 
-    
+    # src/cnnClassifier/entity/config_entity.py
     def get_data_ingestion_config(self) -> DataIngestionConfig:
         config = self.config.data_ingestion
 

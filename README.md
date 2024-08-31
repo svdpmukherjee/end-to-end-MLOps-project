@@ -14,6 +14,12 @@
 9. Update the dvc.yaml
 
 
+src/cnnClassifier/stage_01_data_ingestion.py
+
+<span style="color:blue">"config = ConfigurationManager()"</span> -> calls __init__() to read config.yaml and params.yaml and create artifacts_root directory (mentioned in config.yaml)
+
+"data_ingestion_config = config.get_data_ingestion_config()" -> calls this methods from config/configuration.py which would return DataIngestionConfig data type as mentioned in "src/cnnClassifier/entity/config_entity.py"
+	"config = self.config.data_ingestion" -> this code under "get_data_ingestion_config()"
 
 
 
