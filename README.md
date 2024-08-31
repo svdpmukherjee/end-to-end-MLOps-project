@@ -18,7 +18,7 @@ How the codes work?
 
 1. **main.py** is the entry point which calls **DataIngestionTrainingPipeline** class in **pipeline/stage_01_data_ingestion.py**
 
-2. Inside **pipeline/stage_01_data_ingestion.py**, **config = ConfigurationManager()** calls **\_\_init\_\_()** to read **config/config.yaml** and **params.yaml** and create **artifacts directory** (coded in **config/config.yaml**)
+2. Inside **pipeline/stage_01_data_ingestion.py**, **config = ConfigurationManager()** calls **\_\_init\_\_()** of **config/configuration.py** to read **config/config.yaml** and **params.yaml** and create **artifacts directory** (coded in **config/config.yaml**)
 
 3. **data_ingestion_config = config.get_data_ingestion_config()** calls the method from **config/configuration.py** that returns **DataIngestionConfig** data type as coded in **entity/config_entity.py**
 	**config = self.config.data_ingestion** -> this code under **get_data_ingestion_config()** gets dictionary values coded in **config/config.yaml** 
