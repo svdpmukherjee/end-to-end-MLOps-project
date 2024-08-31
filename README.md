@@ -14,11 +14,13 @@
 9. Update the dvc.yaml
 
 
-src/cnnClassifier/stage_01_data_ingestion.py
+How the codes work? 
 
-$${\color{red}"config = ConfigurationManager()"}$$  -> calls __init__() to read config.yaml and params.yaml and create artifacts_root directory (mentioned in config.yaml)
+1. $${\color{red}main.py}$$ is the entry point which calls $${\color{blue}DataIngestionTrainingPipeline}$$ mentioned in $${\color{red}src/cnnClassifier/pipeline/stage_01_data_ingestion.py}$$
 
-"data_ingestion_config = config.get_data_ingestion_config()" -> calls this methods from config/configuration.py which would return DataIngestionConfig data type as mentioned in "src/cnnClassifier/entity/config_entity.py"
+2. Inside $${\color{red}src/cnnClassifier/pipeline/stage_01_data_ingestion.py}$$, $${\color{blue}config = ConfigurationManager()}$$ calls $${\color{blue}__init__()}$$ to read $${\color{red}config/config.yaml}$$ and $${\color{red}params.yaml}$$ and create $${\color{green}artifacts directory}$$ (mentioned in $${\color{red}config/config.yaml}$$)
+
+3. "data_ingestion_config = config.get_data_ingestion_config()" -> calls this methods from config/configuration.py which would return DataIngestionConfig data type as mentioned in "src/cnnClassifier/entity/config_entity.py"
 	"config = self.config.data_ingestion" -> this code under "get_data_ingestion_config()"
 
 
