@@ -16,9 +16,9 @@
 
 How the codes work? 
 
-1. __main.py is the entry point which calls __DataIngestionTrainingPipeline mentioned in __src/cnnClassifier/pipeline/stage\_01\_data_ingestion.py
+1. **main.py** is the entry point which calls **DataIngestionTrainingPipeline** mentioned in ***src/cnnClassifier/pipeline/stage_01_data_ingestion.py**
 
-2. Inside __src/cnnClassifier/pipeline/stage_01_data_ingestion.py, $${\color{blue}config = ConfigurationManager()}$$ calls <span style="color:red">__init__()</span> to read $${\color{red}config/config.yaml}$$ and $${\color{red}params.yaml}$$ and create $${\color{green}artifacts directory}$$ (mentioned in $${\color{red}config/config.yaml}$$)
+2. Inside __src/cnnClassifier/pipeline/stage_01_data_ingestion.py, $${\color{blue}config = ConfigurationManager()}$$ calls **__init__()** to read $${\color{red}config/config.yaml}$$ and $${\color{red}params.yaml}$$ and create $${\color{green}artifacts directory}$$ (mentioned in $${\color{red}config/config.yaml}$$)
 
 3. "data_ingestion_config = config.get_data_ingestion_config()" -> calls this methods from config/configuration.py which would return DataIngestionConfig data type as mentioned in "src/cnnClassifier/entity/config_entity.py"
 	"config = self.config.data_ingestion" -> this code under "get_data_ingestion_config()"
