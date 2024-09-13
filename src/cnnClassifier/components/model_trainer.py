@@ -74,6 +74,12 @@ class Training:
         self.steps_per_epoch = self.train_generator.samples // self.train_generator.batch_size
         self.validation_steps = self.valid_generator.samples // self.valid_generator.batch_size
 
+        # self.model.compile(
+        #     optimizer=tf.keras.optimizers.SGD(learning_rate=self.config.params_learning_rate),
+        #     loss=tf.keras.losses.CategoricalCrossentropy(),
+        #     metrics=["accuracy"]
+        # )
+
         self.model.fit(
             self.train_generator,
             epochs=self.config.params_epochs,
